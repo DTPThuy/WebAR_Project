@@ -9,6 +9,14 @@ Sau khi nướng bản nháp với các thông số:
 
 ![Outside](https://user-images.githubusercontent.com/91117385/138549155-f8dff618-90ab-4d14-8465-90f4aaf380a5.png)
 
+Kết quả sau khi Bake bản nháp của lightmap
+
+![image](https://user-images.githubusercontent.com/91117385/138563252-e27440b7-33bd-4234-9603-cda099e11520.png)
+
+![image](https://user-images.githubusercontent.com/91117385/138563245-c0c1d218-2dc0-4898-852a-f18cd857a6a1.png)
+
+![image](https://user-images.githubusercontent.com/91117385/138563208-0c454a1e-adc7-42fa-978f-2f96ce9ff3d1.png)
+
 ## Đánh bóng hiện trường: cấu hình vật liệu phản chiếu
 
 ## Thêm các viewer được xác định trước
@@ -18,6 +26,7 @@ Toàn cảnh ngôi nhà từ dưới lên trên gồm:
 - 1 phòng trống
 - Không gian giữa của căn nhà.
 ![Outside](https://user-images.githubusercontent.com/84367730/138488651-b61bfb12-157a-451d-a358-80c42bc1ce48.png)
+
 
 Viewer của badroom 1: 
 
