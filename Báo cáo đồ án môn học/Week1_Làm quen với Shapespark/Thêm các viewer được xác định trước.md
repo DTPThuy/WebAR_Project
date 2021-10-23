@@ -5,6 +5,9 @@
 ## Thêm ánh sáng thực tế
 
 ## Bake bản nháp của lightmap
+Sau khi nướng bản nháp với các thông số:
+
+![Outside](https://user-images.githubusercontent.com/91117385/138549155-f8dff618-90ab-4d14-8465-90f4aaf380a5.png)
 
 ## Đánh bóng hiện trường: cấu hình vật liệu phản chiếu
 
