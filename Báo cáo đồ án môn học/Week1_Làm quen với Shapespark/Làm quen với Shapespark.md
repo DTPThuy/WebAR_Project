@@ -18,6 +18,30 @@ Kết quả sau khi Bake bản nháp của lightmap
 ![image](https://user-images.githubusercontent.com/91117385/138563208-0c454a1e-adc7-42fa-978f-2f96ce9ff3d1.png)
 
 ## Đánh bóng hiện trường: cấu hình vật liệu phản chiếu
+Để đánh bóng cảnh, trong mỗi phòng chính cần:
+1. Thêm một đầu dò ánh sáng (Light probe)
+
+![thêm đầu dò sáng](https://user-images.githubusercontent.com/74582114/138589226-14d52ea9-2a0b-4ecf-aeb0-f0b83dc01a40.png)
+Có thể điều chỉnh vị trí đầu dò ánh sáng bằng cách thay đổi các giá trị trong bảng điều khiển phía bên phải hoặc sử dụng các điều khiển trong trình xem
+![đầu dò ánh sáng](https://user-images.githubusercontent.com/74582114/138589262-d12477b6-1199-4bdc-8c5b-6e1511394c3f.png)
+
+2. Định cấu hình vật liệu phản chiếu:
+- Chuyển sang tab Materials: chọn một đối tượng trong cửa sổ trình xem, vật liệu của nó sẽ được đánh dấu trong danh sách vật liệu
+
+![chọn vật liệu để đánh bóng](https://user-images.githubusercontent.com/74582114/138589452-01df5311-1e64-4552-9610-d80cdc7e4e1b.png)
+
+- Đối với từng vật liệu muốn tạo phản xạ:
++ Đối với vật liệu kim loại: Metallic: 1; Roughness: từ 0-0.4 đối với bề mặt nhẵn, từ 0.41-0.99 đối với bề mặt nhám, mờ
+
+![điều chỉnh thông số vật liệu kim loại](https://user-images.githubusercontent.com/74582114/138589685-4d5c26e6-befa-40ed-afb8-01bfaa6e5fbb.png)
+
++ Đối với vật liệu phi kim loại: Metallic: 0; Roughness: 0-0.4 đối với bề mặt nhẵn, 0.41-0.99 đối với bề mặt thô, mờ bề mặt
+
+![vật liệu phi kim loại](https://user-images.githubusercontent.com/74582114/138589796-fcb4649b-774e-4bc8-ad65-427e2ef02663.png)
+
+Căn phòng sau khi đánh bóng hiện trường: vật liệu phản chiếu
+
+![phòng ngủ sau khi được đánh bóng](https://user-images.githubusercontent.com/74582114/138589886-2340a679-685a-4bdd-922b-06edefc75505.png)
 
 ## Thêm các viewer được xác định trước
 
