@@ -44,11 +44,13 @@ Sau khi nướng bản nháp với các thông số:
 
 Kết quả sau khi Bake bản nháp của lightmap
 
-![image](https://user-images.githubusercontent.com/91117385/138563252-e27440b7-33bd-4234-9603-cda099e11520.png)
 
-![image](https://user-images.githubusercontent.com/91117385/138563245-c0c1d218-2dc0-4898-852a-f18cd857a6a1.png)
+![image](https://user-images.githubusercontent.com/91117385/138595473-2d1b8c43-c653-4ce9-a03d-9332329b7edb.png)
 
-![image](https://user-images.githubusercontent.com/91117385/138563208-0c454a1e-adc7-42fa-978f-2f96ce9ff3d1.png)
+![image](https://user-images.githubusercontent.com/91117385/138595624-0da51c3e-e3ff-4d9b-a632-272a556a56b3.png)
+![image](https://user-images.githubusercontent.com/91117385/138595796-72403538-d033-4e7a-a0d3-414a1663ccdd.png)
+
+
 
 ## Đánh bóng hiện trường: cấu hình vật liệu phản chiếu
 Để đánh bóng cảnh, trong mỗi phòng chính cần:
