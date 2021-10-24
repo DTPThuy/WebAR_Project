@@ -3,6 +3,39 @@
 ## Nhập mô hình 3D vào Shapespark
 
 ## Thêm ánh sáng thực tế
+Định cấu hình các vật liệu trong suốt: Trong Material tab dùng Opacity để thay đổi độ mờ của vật liệu. Đặc biệt, cửa sổ nên cho phép ánh sáng bên ngoài chiếu vào nội thất.
+Trước khi thay đổi phải mở biểu tượng khóa Opacity  (Nhấp vào biểu tượng này sẽ hủy liên kết giá trị này khỏi cài đặt chương trình tạo mô hình 3D. Các giá trị không yêu thích sẽ không bị ghi đè khi mô hình 3D được cập nhật.)
+
+- Opacity của cửa sổ:
+
+![2 1](https://user-images.githubusercontent.com/91942026/138594260-b0345811-af36-4fef-a61e-c6b43a70a545.png)
+
+- Opacity của tủ quần áo:
+
+![2](https://user-images.githubusercontent.com/91942026/138594270-23118c71-356a-439f-8b91-897d54cf20ca.png)
+
+Xem trước đèn trong ảnh dùng Preview. Mục tiêu của bản xem trước là cho biết quang cảnh sẽ trông như thế nào sau khi nướng. Tiếng ồn có thể được bỏ qua; thông thường, không có ích gì khi đợi bản xem trước kết thúc - nó có thể được đóng lại ngay khi bạn đã xem đủ.
+
+![preview](https://user-images.githubusercontent.com/91942026/138594345-c44c6304-8c13-4362-b8bc-f2e9165dcb95.png)
+
+Điều chỉnh cài đặt của ánh sáng Mặt trời và Bầu trời. Giá trị mặc định Strength của Sun ánh sáng và Sky nên được tốt cho phần lớn các mô hình. Tuy nhiên, nếu mô hình của bạn quá tối hoặc quá sáng, hãy thử tăng gấp đôi hoặc giảm một nửa Cường độ tương ứng.
+
+![sun](https://user-images.githubusercontent.com/91942026/138594603-fb841da5-9b4d-4c13-a5b6-ce0b2d434fec.png)
+
+Để điều chỉnh cài đặt của Bầu trời, hãy chuyển đến tab Nướng và thay đổi giá trị Cường độ của Bầu trời.
+
+![sky](https://user-images.githubusercontent.com/91942026/138594676-00055547-2cd4-4b80-9ff5-4f8c7ddc8ea8.png)
+
+Thêm đèn nhân tạo vì để chiếu sáng các phòng không có ánh sáng bên ngoài chiếu trực tiếp, chẳng hạn như phòng tắm hoặc tủ quần áo. (Nếu không có đèn trong phòng, khung cảnh của bạn sẽ tối sau khi nướng.)
+
+- Đèn ngủ:
+
+![đèn ngủ](https://user-images.githubusercontent.com/91942026/138594932-7fa7b93f-b67e-4dee-a155-c90c7c482e70.png)
+
+- Đèn trần nhà:
+
+![đèn trần](https://user-images.githubusercontent.com/91942026/138594939-78e42dad-6be8-42dd-92f0-fe5c1f1492b0.png)
+
 
 ## Bake bản nháp của lightmap
 Sau khi nướng bản nháp với các thông số:
