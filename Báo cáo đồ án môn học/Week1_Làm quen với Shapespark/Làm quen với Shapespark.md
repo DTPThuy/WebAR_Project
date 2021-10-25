@@ -1,7 +1,22 @@
 # Làm quen với Shapespark
 
 ## Nhập mô hình 3D vào Shapespark
+	Để xuất mô hình 3D của bạn từ SketchUp sang Shapespark, hãy làm theo các bước:
 
+	- Bước 1: Đảm bảo rằng ứng dụng Shapespark đang chạy.
+	- Bước 2: Mở mô hình SketchUp.
+	- Bước 3: Mở hộp thoại xuất bằng nút  Export to Shapespark  từ thanh công cụ hoặc mục menu Extensions> Shapespark> Export .
+![Screenshot 2021-10-24 233527](https://user-images.githubusercontent.com/91368774/138603995-376dd903-6e2e-4a66-b5ec-61b515d66d23.png)
+
+	- Bước 4: Định cấu hình xuất:
+![Screenshot 2021-10-24 234255](https://user-images.githubusercontent.com/91368774/138604059-2f76069c-42b4-4191-82df-95820b482ceb.png)
+	+ Loại xuất  - Xác định xem cảnh mới được tạo hay cảnh hiện có được cập nhật.
+	+ Tên cảnh  - Tên của cảnh ở Shapespark.
+	+ Bao gồm mặt trời  - Nếu được bật, mặt trời SketchUp sẽ được xuất. Bóng mặt trời trong Shapespark khớp với bóng SketchUp.
+
+	- Bước 5: Bắt đầu xuất và đợi cho đến khi hoàn tất.
+	- Bước 6: Cảnh đã xuất hiện được thêm vào danh sách các cảnh trong Shapespark.
+	
 ## Thêm ánh sáng thực tế
 Định cấu hình các vật liệu trong suốt: Trong Material tab dùng Opacity để thay đổi độ mờ của vật liệu. Đặc biệt, cửa sổ nên cho phép ánh sáng bên ngoài chiếu vào nội thất.
 Trước khi thay đổi phải mở biểu tượng khóa Opacity  (Nhấp vào biểu tượng này sẽ hủy liên kết giá trị này khỏi cài đặt chương trình tạo mô hình 3D. Các giá trị không yêu thích sẽ không bị ghi đè khi mô hình 3D được cập nhật.)
@@ -110,3 +125,9 @@ Viewer của badroom 3:
 
 
 ## Tải cảnh nháp lên website
+	Khi mô hình nháp của bạn đã sẵn sàng để tải lên internet, bạn có thể đóng cửa sổ trình chỉnh sửa Shapespark:
+	- Bước 1: Nhấp vào  nút Upload trong cửa sổ Shapespark chính .
+![image](https://user-images.githubusercontent.com/91368774/138602453-7c3db1b1-efde-4ea3-95af-56f927a45005.png)
+![Screenshot 2021-10-24 234554](https://user-images.githubusercontent.com/91368774/138604181-c681dbef-64f0-4dcf-9fdc-52aec432d1e1.png)
+  - Bước 2: Sau khi cảnh được tải lên, bạn sẽ thấy một cửa sổ bật lên có liên kết đến cảnh . Cảnh hiện cũng có sẵn trong tab Cảnh trong tài khoản Shapespark của bạn tại cloud.shapespark.com .
+![245590388_617152449463337_2912202880070052367_n](https://user-images.githubusercontent.com/91368774/138620136-2c0263d4-89b7-480b-8dc8-67bcc69cac1e.png)
