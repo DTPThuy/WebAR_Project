@@ -83,7 +83,8 @@ Ngay sau khi khai báo renderer, cần thêm 1 bước mới hoàn thành khởi
 Bước này sẽ tạo 1 canvas để chứa các object của chúng ta với kích thước như mình set là bằng luôn kích cỡ màn hình web.
 VD:
 
-![image](https://user-images.githubusercontent.com/91117385/139472610-b8130616-7c5e-4908-af99-529a17e4ec31.png)
+![k](https://user-images.githubusercontent.com/91117385/139477177-57101fa9-b40a-4fd0-875a-03dde54858b1.gif)
+
  
  các phần tử phía trên cùng canvas insert vào qua câu lệnh :
  ```
@@ -143,9 +144,6 @@ set camera position theo 2 cách:
     camera.position.z = 10;
 ```   
 
-Kết Quả:
-    
-![image](https://user-images.githubusercontent.com/91117385/139472298-e14c9dbc-6039-47c9-b817-5c701bf46b03.png)
 
 
 ## Cài đặt Three JS và build 1 chương trình
