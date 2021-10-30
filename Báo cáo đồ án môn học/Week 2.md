@@ -240,14 +240,15 @@ animate();
 
 
 # Tìm hiểu Github và cách merge code khi làm việc nhóm với Github
-    Giới thiệu Github
+Giới thiệu Github
 GitHub là một hệ thống quản lý dự án và phiên bản code, hoạt động giống như một mạng xã hội cho lập trình viên. Bên cạnh đó GitHub còn là một dịch vụ nổi tiếng cung cấp kho lưu trữ mã nguồn Git cho các dự án phần mềm. Github có đầy đủ những tính năng của Git, ngoài ra nó còn bổ sung những tính năng về social để các developer tương tác với nhau.
-    Vài thông tin về GIT:
-•	Là công cụ giúp quản lý source code tổ chức theo dạng dữ liệu phân tán.
-•	Giúp đồng bộ source code của team lên 1 server.
-•	Hỗ trợ các thao tác kiểm tra source code trong quá trình làm việc (diff, check modifications, show history, merge source, …)
+    
+Vài thông tin về GIT:
+-   Là công cụ giúp quản lý source code tổ chức theo dạng dữ liệu phân tán.
+-   Giúp đồng bộ source code của team lên 1 server.
+-   Hỗ trợ các thao tác kiểm tra source code trong quá trình làm việc (diff, check modifications, show history, merge source, …)
 
-    Sử dụng Github
+Sử dụng Github
 Bước 1: Tạo Github account
 -	Màn hình hiển thị của Github
     ![Screenshot 2021-10-29 203711](https://user-images.githubusercontent.com/91368774/139537652-0c6862c0-983d-4880-8fd4-e93fa22c8308.png)
@@ -257,13 +258,13 @@ Bước 2: Chọn new để tạo kho lưu trữ mới
 -	Điền đoạn mô tả ngắn
 -	Cài đặt quyền riêng tư
 -	Tạo kho lưu trữ
-    ![Screenshot 2021-10-29 221540](https://user-images.githubusercontent.com/91368774/139537661-801143b8-58c5-43a6-9245-ef0c85d5ec3f.png)
+![Screenshot 2021-10-29 221540](https://user-images.githubusercontent.com/91368774/139537661-801143b8-58c5-43a6-9245-ef0c85d5ec3f.png)
 Màn hình sau khi tạo dự án
-   ![Screenshot 2021-10-29 222619](https://user-images.githubusercontent.com/91368774/139537707-8e8258b9-8162-46be-ad05-8f4d191173e1.png)
+![Screenshot 2021-10-29 222619](https://user-images.githubusercontent.com/91368774/139537707-8e8258b9-8162-46be-ad05-8f4d191173e1.png)
 
 Bước 3 : Tạo dự án mới bằng command line 
-    Đường dẫn liên kết kho lưu trữ
-    ![Screenshot 2021-10-29 230253](https://user-images.githubusercontent.com/91368774/139537745-568d3f5f-8312-4b36-95b4-0c89c9289ee0.png)
+-   Đường dẫn liên kết kho lưu trữ
+![Screenshot 2021-10-29 230253](https://user-images.githubusercontent.com/91368774/139537745-568d3f5f-8312-4b36-95b4-0c89c9289ee0.png)
 
 ```    
 mkdir tim_hieu_github	//tạo thư mục mới
@@ -279,15 +280,15 @@ git branch -M main		//tạo nhánh chính trong dự án
 git remote add origin https://github.com/NgoThao21/tim_hieu_github   	//đưa đường dẫn dự án lên github
 git push -u origin main 	//đẩy dự án lên github
 ```
-    ![Screenshot 2021-10-29 230301](https://user-images.githubusercontent.com/91368774/139537908-2565b4eb-62e9-48fd-88e9-7756437508aa.png)
-    ![Screenshot 2021-10-29 230603](https://user-images.githubusercontent.com/91368774/139537925-ada63f09-5110-41ca-8e50-c6518652d8bc.png)
+![Screenshot 2021-10-29 230301](https://user-images.githubusercontent.com/91368774/139537908-2565b4eb-62e9-48fd-88e9-7756437508aa.png)
+![Screenshot 2021-10-29 230603](https://user-images.githubusercontent.com/91368774/139537925-ada63f09-5110-41ca-8e50-c6518652d8bc.png)
 
 
-    Để lấy kho chứa về làm kho chứa riêng của mình
-    Chọn vào kho lưu trữ của chủ sở hữu
-    ![Screenshot 2021-10-30 092827](https://user-images.githubusercontent.com/91368774/139537958-8916f05e-85dc-4fce-bc41-38cc26708567.png)
-    Đường liên kết
-    ![Screenshot 2021-10-30 093208](https://user-images.githubusercontent.com/91368774/139538015-c60bbb99-fa71-4af1-9f70-3dd7303a8ec6.png)
+Để lấy kho chứa về làm kho chứa riêng của mình
+-   Chọn vào kho lưu trữ của chủ sở hữu
+![Screenshot 2021-10-30 092827](https://user-images.githubusercontent.com/91368774/139537958-8916f05e-85dc-4fce-bc41-38cc26708567.png)
+Đường liên kết
+![Screenshot 2021-10-30 093208](https://user-images.githubusercontent.com/91368774/139538015-c60bbb99-fa71-4af1-9f70-3dd7303a8ec6.png)
     
 ```
 git clone https://github.com/NgoThao21/se08-26.1.gi	//để tải cái kho chứa về máy
@@ -295,7 +296,7 @@ cd .\se08-26.1\		//chuyển vào thư mục
 git log --oneline  		//kiểm tra các commit trước đó
 code .	//mở code cho phép code trực tiếp 
 ```
-    ![Screenshot 2021-10-30 214439](https://user-images.githubusercontent.com/91368774/139538048-bda28963-1ee6-4de0-bbdf-12970dc5c55e.png)
+![Screenshot 2021-10-30 214439](https://user-images.githubusercontent.com/91368774/139538048-bda28963-1ee6-4de0-bbdf-12970dc5c55e.png)
     
 ```
 git add .	//thêm code sau khi chỉnh sửa
@@ -303,11 +304,11 @@ git commit -m”ten_commit”   //commit code
 git remote -v	//kiểm tra remote
 git push origin master		//đẩy commit cuối cùng lên
 ```    
-Vào github chọn Pull request để tạo yêu cầu cập nhập với chủ sở hữu
-    ![Screenshot 2021-10-30 211236](https://user-images.githubusercontent.com/91368774/139538076-904db68b-0ca7-4efe-9299-0be6a89c2a3c.png)
+-   Vào github chọn Pull request để tạo yêu cầu cập nhập với chủ sở hữu
+![Screenshot 2021-10-30 211236](https://user-images.githubusercontent.com/91368774/139538076-904db68b-0ca7-4efe-9299-0be6a89c2a3c.png)
 
-    Đợi chủ sở hữu đồng ý : merge pull request
-    Quay lại command line
+-   Đợi chủ sở hữu đồng ý : merge pull request
+-   Quay lại command line
     ```
     Git pull origin master  //Cập nhập cho nhánh master
     ```
