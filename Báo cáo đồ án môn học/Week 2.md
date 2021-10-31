@@ -78,7 +78,11 @@ Mọi app được xây dựng bằng ThreeJS (và hầu hết các real-time 3d
     
     
 Mesh
-    
+ha lo jjjjjnnsfbkjsfvz v hkadsjvchjkan flkaup.mf b, jhsgcfkushf
+anh yeue 
+fkmskfjseiougtvlkreugoe
+dfjhsdidfuoieufd nv  ierrfog8eyr
+sjfhset7gfnvjygoelcn vgrg8yergpy
 Tất cả những thứ scene, camera, canvas, và renderer đều không phải là thứ ta nhìn thấy trên màn hình điện thoại (Canvas là nơi chứa - tức màn hình điện thoại, không phải là hình ảnh trên màn hình). Những object hình ảnh trên màn hình chính là Mesh. Mesh thường được mô tả như lưới. Lưới càng dày càng chính xác.
     
 1 đối tượng mesh là vỏ chứa hình geometry và chất liệu material của đối tượng và định nghĩa ra vị trí đối tượng trong không gian 3 chiều. Geometry là thứ định nghĩa tạo nên hình dạng cho đối tượng, còn Material cho hiệu ứng bề mặt của đối tượng trông sẽ như thế nào.
