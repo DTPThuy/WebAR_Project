@@ -4,6 +4,51 @@
 
 ## Gán nhãn cho đối tượng ( khi click vào đối tương gán nhãn hiện popup thông tin đối tượng).
 
+Bạn có thể thêm những Extension để làm cho render tương tác hơn khi nó được tải lên web. Để có thể gán nhãn cho đối tượng, đầu tiên bạn vào tab Viewer, ở phía dưới bạn sẽ thấy phần Extensions
+
+![Thêm extensions](https://user-images.githubusercontent.com/74582114/139563577-ceb16c89-8a33-419f-aee8-c7d7f8ae3c58.png)
+
+Nhấp vào dấu cộng để thêm extension, bạn sẽ thấy một cửa sổ mới hiện lên, tại đây bạn có thể chọn loại extension, bao gồm HTML Label, audio, Material picker...
+
+![chọn loại extension](https://user-images.githubusercontent.com/74582114/139563635-061ee2fe-2e6c-4d76-94f5-caf72efe2381.png)
+
+Chúng ta sẽ đi tìm hiểu về HTML Label
+
+
+![đặt tên (biểu tượng nhãn)](https://user-images.githubusercontent.com/74582114/139563730-5d5f5c8d-aa07-459d-b3f8-a99635f743d0.png)
+
+Tại đây bạn có thể đặt tên, bạn sẽ thấy một số cài đặt
+Đầu tiên là đặt vị trí bằng cách nhấp chuột vào một chỗ trong scene, để thay đổi vị trí bạn nhấp chuột vào vị trí khác hoặc thay đổi tọa độ X, Y, Z. 
+Bạn cũng có thể điều chỉnh kích thước của biểu tượng tại Radius. Thay vì sử dụng biểu tượng, bạn cũng có thể dùng chữ ở phần Icon/Type. 
+
+![Ghi nội dung nhãn](https://user-images.githubusercontent.com/74582114/139563924-7fc19717-0e0f-4454-9ef9-4eba0ac5f18e.png)
+
+Cuối cùng là nội dung của nhãn HTML, bạn có thể ghi thông tin đối tượng muốn gán ở phần content và nó sẽ xuất hiện dưới dạng chữ khi bạn nhấp vào biểu tượng 
+
+![hiện thông tin nhãn](https://user-images.githubusercontent.com/74582114/139563963-28fbfae2-f585-4631-8a91-b7f2d662d968.png)
+
+Ngoài ra chúng ta còn có thể nhúng video hoặc trang web. Ví dụ bạn muốn nhúng một video trên youtube: đi đến video bạn muốn nhúng 
+
+![chọn 1 video trên youtube](https://user-images.githubusercontent.com/74582114/139564026-00f03f60-e17d-44a3-8be9-27c45a45d9fb.png)
+
+Bên dưới video nhấp vào chia sẻ, chọn nhúng
+
+![chọn nhúng](https://user-images.githubusercontent.com/74582114/139564049-76235243-8d28-4c7c-9b43-0d84542d0a34.png)
+
+Copy mã code 
+
+![Copy phần code](https://user-images.githubusercontent.com/74582114/139564080-ef4f5b4c-0e47-4d8d-a4d9-61f389e118b8.png)
+
+Sau đó quay lại Shapesprak, gán nó vào phần content của HTML Label:
+
+![gán vào](https://user-images.githubusercontent.com/74582114/139564109-ceec948c-3f9f-4964-b879-8c1ebdf56d2d.png)
+
+Bây giờ, bạn có thể nhấp vào biểu tượng lần nữa để mở video
+
+![sau khi gán xong](https://user-images.githubusercontent.com/74582114/139564120-02b44185-cd1d-4720-98e4-1e9b440fc6f6.png)
+
+Vậy là chúng ta đã gán xong rồi đó, gán nội dung thông tin nhãn hoặc bất cứ video nào bạn muốn.
+
 # Tìm hiểu thư viện Three JS
 
 ## Các khái niệm về ThreeJS
