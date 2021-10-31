@@ -188,9 +188,11 @@ set camera position theo 2 cách:
     camera.position.y = 0;
     camera.position.z = 10;
 ```   
+Kết quả:
+    
+![video](https://user-images.githubusercontent.com/91117385/139566252-b25f2332-dbd1-49c0-8f06-e19017831dd8.gif)
 
-
-
+    
 ## Cài đặt Three JS và build 1 chương trình
 
 ### Cài đặt Three JS
