@@ -1,6 +1,36 @@
 # Shapepark
 
 ## Thay đổi vật liệu đối tượng
+Ta có thể thay đổi trạng thái vật liệu đối tượng trên Shapespark
+
+Đầu tiên để làm việc đó, chuyển đến rab Viewer. Ở dưới bạn sẽ thấy phần Extensions.
+
+Nhấp vào dấu cộng để thêm Extension
+
+Và bạn sẽ thấy một cửa sổ mới bật lên. Ở đây bạn có thể chọn loại Extension bao gồm nhãn HTML, âm thanh và bộ chọn vật liệu,....
+
+Hãy nhấp vào Material picker. Vì mình muốn sử dụng cho sàn nhà nên mình đặt tên nó là Floor
+
+![Screenshot (17)](https://user-images.githubusercontent.com/91942026/139595018-e85d0ada-d839-4096-9d68-b65ccddc0e5e.png)
+
+Tiếp theo bạn nhấp vào dấu cộng ở phần Material to replace,  nhấp vào vùng mà bạn muốn thiết lập thay đổi vật liệu.
+
+![Screenshot (18)](https://user-images.githubusercontent.com/91942026/139595048-4bdcd245-42fb-4279-a451-eb704c22bd1c.png)
+
+Sau đó bạn hãy thêm một số vật liệu trong cảnh mà mình muốn sử dụng bằng cách nhấp vào dấu cộng cuối cùng trong bảng Create extension rồi click vào các vật kiệu có trong cảnh, ấn ok.
+
+![Screenshot (19)](https://user-images.githubusercontent.com/91942026/139595090-d1f071ae-0fbd-4525-944c-e510b3b3a88d.png)
+
+Tại Trigger bạn thực hiện thao tác gán nhãn để thay đổi trạng thái vật liệu.
+
+![Screenshot (20)](https://user-images.githubusercontent.com/91942026/139595100-27609dae-32ab-478a-9fad-424b3455506a.png)
+
+Sau khi hoàn thành dán nhãn bạn chỉ cần ấn ok là có thể thay đổi trạng thái vật liệu của từng đối tượng với các vật liệu có sẵn trong cảnh.
+![Screenshot (21)](https://user-images.githubusercontent.com/91942026/139595109-4c3f62d6-92cd-4714-a6c1-ea4fb6819710.png)
+
+![Screenshot (22)](https://user-images.githubusercontent.com/91942026/139595114-a8baa84d-ca16-40ef-84aa-b2864d5818c0.png)\
+
+
 
 ## Gán nhãn cho đối tượng ( khi click vào đối tương gán nhãn hiện popup thông tin đối tượng).
 
