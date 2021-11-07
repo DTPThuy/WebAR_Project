@@ -121,7 +121,7 @@ Bạn sẽ thấy kết quả tương tự như trên Mac:
 Trường hợp máy tính bạn không có PHP hoặc bạn muốn nâng cấp lên phiên bản PHP mới hơn bạn có thể sử dụng chương trình AptGet. AptGet là chương trình quản lý phần mềm tương tự như Homebrew nhưng dùng cho Ubuntu.
 Trên cửa sổ terminal bạn chạy câu lệnh sau để cài đặt PHP: $ sudo apt-get install php55
 
-### Các toán tử PHP được sử dụng phổ biến 
+### 3. Các toán tử PHP được sử dụng phổ biến 
 - Toán tử số học: PHP hỗ trị hầu hết các toán tử số học như cộng +, trừ -, nhân *, chia /, lũy thừa pow() và tính phần dư %.
 - Toán tử gán giá trị
 - Toán tử so sánh: dùng để so sánh hai giá trị dạng số hoặc dạng chuỗi với nhau.
@@ -131,8 +131,111 @@ Trên cửa sổ terminal bạn chạy câu lệnh sau để cài đặt PHP: $ 
         || và or : Toán tử logic tuyển
 - Toán tử nối chuỗi: Để nối chuỗi lại với nhau chúng ta dùng toán tử `.
 - Toán tử nối chuỗi và gán .= sẽ thực hiện việc nối chỗi hiện tại với một chỗi mới rồi sau đó gán giá trị này cho chính chuỗi ban đầu.
+### 4. Cú pháp
+#### Thẻ PHP:
+Mã lệnh PHP được đặt trong cặp mở <?php và thẻ đóng ?>. Ví dụ:
 
-### Cấu trúc của một hàm trong PHP
+![1](https://user-images.githubusercontent.com/74582114/140648058-7c0d7101-4cfd-4f9e-aea3-64e8a85c67c0.png)
+
+#### Câu lệnh:
+Câu lệnh (hay statement) trong PHP được tạo ra để thực hiện một tác vụ nào, một câu lệnh thường được viết trong một dòng và kết thúc bởi dấu ;.
+Câu lệnh không nhất thiết phải in ra một cái gì đó mà đơn giản nó thực hiện một hành động nhất định. Ví dụ câu lệnh dưới đây được dùng để thực hiện phép toán cộng giữa 2 số:
+
+![ex1](https://user-images.githubusercontent.com/74582114/140649178-4ca8f52f-f0ad-4142-ad0c-1ee7ac58978c.png)
+
+#### Chú thích:
+Chú thích (hay comment) được dùng để giải thích tóm tắt nội dung hoặc mục đích của một hoặc một nhóm các câu lệnh.
+Trong PHP bạn có thể viết comment theo 2 kiểu sử dụng ký tự // hoặc /* */ như sau:
+
+![ex2](https://user-images.githubusercontent.com/74582114/140649217-fa6ff208-1211-4da1-944a-e1641fe72fa3.png)
+
+Với các chú thích có độ dài 1 dòng thì chúng ta thường dùng kiểu comment //. Ngược lại các chú thích nhiều dòng sẽ thường được viết sử dụng kiểu /* */
+
+### 5. Biến
+Biến được sử dụng để lưu trữ dữ liệu tạm thời trong chương trình và giá trị của biến có thể được thay đối trong khi chạy chương trình.
+#### Khởi tạo biến
+Trước khi có thể sử dụng biến thì chúng ta cần khởi tạo biến. Trong PHP việc khởi tạo biến bao gồm đặt tên biến và sau đó gán một giá trị cho biến. Biến trong PHP được bắt đầu bằng ký tự $ và theo sau đó là tên biến.
+
+![ex3](https://user-images.githubusercontent.com/74582114/140649256-0057b96c-270b-49d3-9bbb-f8c2e47c05fb.png)
+
+#### Tên biến
+Trong PHP, tên biến có thể bao gồm chữ cái (in hoa hoặc in thường: từ a-z hoặc A-Z), hoặc dấu gạch dưới. Tuy nhiên tên biến phải được bắt đầu bằng chữ cái hoặc dấu gạch dưới.
+
+![ex4](https://user-images.githubusercontent.com/74582114/140649282-0825cac0-2b99-4da0-b790-8d4c33ff8ab7.png)
+
+#### Kiểu dữ liệu của biến
+PHP là ngôn ngữ kiểu động hay dynamic type. Điều này cho phép giá trị của biến có thể thay đổi kiểu dữ liệu ví dụ từ kiểu số sang kiểu chuỗi:
+
+![ex5](https://user-images.githubusercontent.com/74582114/140649315-93a0c46a-0646-463e-8619-3b171e78540a.png)
+
+### 6. echo và print trong PHP
+Chúng ta có thể hiển thị dữ liệu ra màn hình bằng cách sử dụng echo hoặc print.
+#### Câu lệnh echo:
+Câu lệnh echo được sử dụng để hiển thị kết quả của một hoặc nhiều chuỗi ký tự, biến hoặc biểu thức toán học....
+
+![ex6](https://user-images.githubusercontent.com/74582114/140649341-9eb90147-c2ea-4dd5-808f-77fcc3cc77e4.png)
+
+Lưu ý: echo là một cấu trúc được cung cấp sẵn (language construct) bởi ngôn ngữ PHP và không phải là một hàm. Do đó khi sử dụng echo chúng ta không cần đặt giá trị cần hiển thị bên trong cặp dấu ngoặc như khi gọi hàm.
+
+Chúng ta sẽ tìm hiểu chi tiết về hàm và cách sử dụng hàm trong các bài học sau.
+
+Để nối chuối lại với nhau chúng ta sử dụng dấu chấm .:
+
+![ex7](https://user-images.githubusercontent.com/74582114/140649357-5780ac27-ceb4-4986-b35d-0826be0f23dc.png)
+
+Khi nối một chuỗi với một số (integer hoặc float) PHP sẽ tự động chuyển đổi giá trị số này về dạng chuỗi rồi thực hiện việc nối chuỗi như thông thường:
+
+![ex8](https://user-images.githubusercontent.com/74582114/140649410-b38421d8-b958-4deb-8011-e57609edf18f.png)
+
+#### Câu lệnh print:
+Câu Lệnh print được dùng để hiển thị giá trị của một giá trị dạng chuỗi, biến hoặc kết quả của biểu thức...
+
+![ex9](https://user-images.githubusercontent.com/74582114/140649429-062c113f-16ab-4608-a1eb-25fd444b6ed9.png)
+
+Tương tự như echo thì print cũng không phải là hàm do đó khi sử dụng câu lệnh print chúng ta không cần đặt giá trị cần in bên trong cặp dấu ngoặc ().
+### 7. Kiểu dữ liệu trong PHP
+#### Kiểu chuỗi (String)
+Kiểu dữ liệu chuỗi (hay string) trong PHP bao gồm tất cả các ký tự kể cả ký tự trắng và được đặt bên trong cặp dấu nháy kép " " hoặc cặp dấu nháy đơn ' ':
+
+![ex10](https://user-images.githubusercontent.com/74582114/140649456-8e796448-a756-4c85-a050-2cd4d5002688.png)
+
+#### Kiểu số nguyên (Integer)
+Kiểu dữ liệu số nguyên (hay integer) trong PHP dùng để biểu diễn các số nguyên trong toán học:
+
+![ex11](https://user-images.githubusercontent.com/74582114/140649476-4bd11e4b-5336-4d0a-b1c2-bb865ac6e6eb.png)
+
+#### Kiểu Float
+Kiểu dữ liệu float trong PHP dùng để biểu diễn các số thập phân (vô hạn hoặc hữu hạn) và số thực trong toán học nhưng không phải là số nguyên.
+
+![float](https://user-images.githubusercontent.com/74582114/140649502-eca1ac11-fe44-46e1-b947-75c21c9241e4.png)
+
+#### Kiểu mảng (Array)
+Kiểu mảng (array) trong PHP là một kiểu dữ liệu đặc biệt có thể lưu trữ một hoặc nhiều giá trị bên trong nó bao gồm cả mảng.
+Mảng bao gồm các phần từ khác nhau bên trong nó. Mỗi phần tử lưu trữ một giá trị và được đánh một khoá duy nhất để phân biệt với các phần tử khác trong cùng mảng.
+
+![array](https://user-images.githubusercontent.com/74582114/140649533-88e71a38-0f08-4e79-8d42-11486d3883f3.png)
+
+Ví dụ trên biến $top_car_brands có giá trị là một mảng gồm 5 phần tử khác nhau. Mỗi phần tử được đánh số thứ tự từ 0 cho tới 4. Các số thứ tự này cũng chính là khoá của phần tử.
+Để truy cập giá trị của phần tử chúng ta sử dụng tới khoá của phần tử đó đặt bên trong cặp dấu ngoặc vuông []:
+
+![arr](https://user-images.githubusercontent.com/74582114/140649566-50f01e97-e15e-4716-b93c-7edba39531fb.png)
+
+#### Kiểu Boolean
+Kiểu dữ liệu boolean trong PHP chỉ bao gồm hai giá trị là true và false:
+
+![boolean](https://user-images.githubusercontent.com/74582114/140649588-5713cfe3-f5c3-4d83-b203-871799f0a0c7.png)
+
+Dữ liệu kiểu boolean thường xuất hiện trong các phép toán logic như logic so sánh ngang bằng, nhỏ hơn, lớn hơn, logic phủ định, logic và, logic hoặc...:
+
+![bl](https://user-images.githubusercontent.com/74582114/140649614-8711e6eb-4470-4c01-bb94-4bf52af0fa05.png)
+
+#### Kiểu NULL
+Kiểu dữ liệu NULL trong PHP khá đặc biệt bởi nó chỉ gồm một giá trị duy nhất là chính nó, khi một biến có giá trị là null thì điều này có ý nghĩa là chưa có giá trị nào được gán cho nó.
+
+![null](https://user-images.githubusercontent.com/74582114/140649641-c53966bb-46d6-40e4-bcb2-2eefad1b7ef7.png)
+
+Kiểu dữ liệu NULL phổ biến khi chúng ta truy vấn dữ liệu trong cơ sở dữ liệu và không có giá trị nào tương ứng trả về.
+### 8. Hàm trong PHP
 Cú pháp tổng quát khai báo hàm trong PHP là:
 
     function func_name($vars)
@@ -154,7 +257,7 @@ Hàm có thể trả về một giá trị khi được gọi. Để khai báo m
         return $num1 + $num2;
     }
 
-### Cấu Trúc Điều Khiển 
+### 9. Cấu Trúc Điều Khiển 
 Trong lập trình, cấu trúc điều khiển hay còn gọi là control structure được sử dụng để điều khiển luồng chạy của chương trình.
 PHP cung cấp các cấu trúc điều khiển sau đây:
     •	Câu lệnh if.
@@ -186,7 +289,7 @@ PHP cung cấp các cấu trúc điều khiển sau đây:
     ... default:
      // code được thực thi nếu giá trị biểu thức khác với  tất cả các giá trị so sánh ở trên
      break; }
-### Vòng lặp
+### 10. Vòng lặp
 Trong PHP chúng ta có các loại vòng lặp sau:
 •	Vòng lặp while.
 •	Vòng lặp do...while.
@@ -216,7 +319,7 @@ Vòng lặp while sẽ kiểm tra điều kiện trước rồi thực hiện c�
     do {
         // dòng lệnh
     } while ($condition);
-### Cú pháp vòng lặp foreach trong PHP
+### 11. Cú pháp vòng lặp foreach trong PHP
 Vòng lặp foreach tự động lặp qua các phần tử trong mảng, nó lặp cho khi nào tới phần tử cuối cùng thì thôi. 
 
 	foreach ($array as $key => $value){
@@ -229,7 +332,7 @@ Hoặc:
     }
 Trong đó $array là mảng cần lặp, $key là số chỉ mục (mảng có chỉ mục) hoặc là key (trong mảng kết hợp), $value là giá trị của phần tử ở vị trí $key.
 
-### Mảng 
+### 12. Mảng 
 Mảng là kiểu dữ liệu cho phép chúng ta lưu trữ nhiều giá trị trong nó bao gồm việc lưu trữ giá trị của một hoặc nhiều mảng khác.
 
 Mảng trong PHP được chia thành 3 loại khác nhau đó là:
