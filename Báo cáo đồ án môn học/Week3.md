@@ -1,5 +1,4 @@
 #  Tìm hiểu về lập trình web php, mysql, sử dụng framework Yii2 ( template Yii2 starter kit)
-
 ## Tìm hiểu Yii2 và cài đặt
 
 Yii là một framework php được xây dựng để phát triển các hệ thống web quy mô lớn dựa trên nền tảng các component. Yii cho phép tái sử dụng tối đa các thành phần trong hệ thống nhằm tăng tốc độ ứng dụng.
@@ -376,6 +375,29 @@ Mảng dưới đây là một mảng đánh số thứ tự với các khoá l�
 - Mảng Rỗng : Mảng rỗng là mảng mà không chứa bất cứ phần tử nào
 
 ## Tìm hiểu MySql
+### Chuẩn bị
+
+Đầu tiên, bạn cần tạo mới CSDL tên là yii2basic. Yii hỗ trợ nhiều CSDL trong ứng dụng, bạn có thể dùng những CSDL như SQLite, MySQL, PostgreSQL, MSSQL hoặc Oracle. Để cho đơn giản, mình sẽ dùng MySQL trong phần này.
+
+ Tiếp đến, tạo mới bảng vào CSDL tên là country, đồng thời chèn thêm dữ liệu. Bạn có thể chạy những câu lệnh SQL sau:
+ 
+ ![Screenshot (45)](https://user-images.githubusercontent.com/91942026/140658392-864abfe7-dfed-4304-b93e-55c8b74bfc17.png)
+
+Đến đây, bạn có CSDL là yiibasic, có chứa bảng country có 3 cột và 10 trường dữ liệu
+
+ #### Cấu hình kết nối với CSDL
+
+Trước tiên, hãy chắc chắn rằng bạn đã cài 2 gói PHP PDO và PDO driver dành cho các CSDL mà đang sử dụng(ví dụ pdo_mysql cho MySQL). Đối với các CSDL quan hệ thì những gói này cần phải có.
+![Screenshot (46)](https://user-images.githubusercontent.com/91942026/140658446-84921829-57c7-487c-b5d4-65f6f6fba67c.png)
+
+Sau khi những yêu cầu trên được cài đặt, mở file config/db.php và thay đổi các tham số chính xác tới CSDL. Mặc định, file sẽ có những đoạn code sau:
+
+File config/db.php là file điển hình dành cho cấu hình ứng dụng configuration. Các tham số được mô tả trong file cần thiết để tạo mới và khởi tạo các thể hiện yii\db\Connection và thực hiện các câu lệnh truy vấn
+
+Các thông tin cấu hình về CSDL ở trên được truy cập qua ứng dụng qua câu lệnh Yii::$app->db.
+
+Lưu ý: File config/db.php sẽ chứa các thông tin chính trong việc cấu hình ứng dụng config/web.php, Những thông tin làm thế nào để ứng dụng cần được khởi tạo. Bạn có thể tham khảo thêm trong phần cấu hình ứng dụng .
+
 
 ### Class Active Record
 Để thể hiện và thao tác với bảng dữ liệu country, ta tạo mới class Country, và lưu vào file models/Country.php.
