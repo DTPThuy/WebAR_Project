@@ -1,6 +1,76 @@
 #  Tìm hiểu về lập trình web php, mysql, sử dụng framework Yii2 ( template Yii2 starter kit)
 ## Tìm hiểu MySql
 ## Tìm hiểu Yii2 và cài đặt
+
+Yii là một framework php được xây dựng để phát triển các hệ thống web quy mô lớn dựa trên nền tảng các component. Yii cho phép tái sử dụng tối đa các thành phần trong hệ thống nhằm tăng tốc độ ứng dụng.
+
+Yii là một mô hình MVC framewkork nên rất dễ sử dụng và giúp cho code dễ đọc dễ control.
+
+Yii rất nhẹ và được trang bị giải pháp cache tối ưu nên nó đặc biệt hữu dụng cho ứng dụng web có dung lượng dữ liệu trên đường truyền lớn như web portal, forum, CMS, e-commerce, v.v.
+
+Yii có rất nhiều các Widget giups cho quá trình code trở nên nhanh chóng và dễ dàng hơn
+
+Cài đặt
+
+B1:Đảm bảo bạn đã cài đặt Xampp 
+
+![image](https://user-images.githubusercontent.com/91117385/140639514-902e9b41-15b0-48e4-a080-7fc9505a1079.png)
+ 
+
+B2: Tải về và chạy Composer-Setup.exe.
+
+```
+https://getcomposer.org/download/
+```
+![image](https://user-images.githubusercontent.com/91117385/140639586-8c831f84-8cc8-4d51-911c-e578f56c82cb.png)
+
+Để nhanh chóng cài đặt Composer trong thư mục hiện tại, hãy chạy tập lệnh sau trong thiết bị đầu cuối của bạn. 
+
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+
+Update composer
+
+```
+composer self-update.
+```
+
+Thực hiện các lệnh 
+```
+composer global require "fxp/composer-asset-plugin:^1.4.1"
+
+composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+```
+
+B3: Tải gói cài đặt từ yiiframework.com.
+
+https://www.yiiframework.com/download
+
+Giải nén file tải về vào một thư mục Web của ứng dụng cần chạy.
+
+B4:Sửa đồi file config/web.php bởi nhập thông tin secret key cookieValidationKey ở mục cấu hình (này được thực hiện tự động nếu bạn đang cài đặt Yii sử dụng Composer):
+
+Sau khi cài đặt, bạn có thể sử dụng trình duyệt để truy cập ứng dụng Yii được cài đặt với URL dưới đây:
+
+```
+http://localhost/yii/basic/web/index.php
+```
+với yii/basic là đường dẫn đến thư mục cài đặt yii bạn
+
+ ![image](https://user-images.githubusercontent.com/91117385/140639530-f6ffa809-7b1a-4f3e-abee-7b3091f4b397.png)
+
+ 
+
+Đăng nhập với
+ 
+Username: admin
+
+Password: admin
+
 ## Tìm hiểu PHP
 ### 1. Giới thiệu:
 - PHP (Personal Home Page) là ngôn ngữ lập trình kịch bản mã nguồn mở được dùng phổ biến để tạo ra các ứng dụng web chạy trên máy chủ. Mã lệnh PHP có thể được nhúng vào trong trang HTML nhờ sử dụng cặp thẻ PHP <?php ?>
