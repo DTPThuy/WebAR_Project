@@ -51,3 +51,154 @@ Bạn sẽ thấy kết quả tương tự như trên Mac:
 Trường hợp máy tính bạn không có PHP hoặc bạn muốn nâng cấp lên phiên bản PHP mới hơn bạn có thể sử dụng chương trình AptGet. AptGet là chương trình quản lý phần mềm tương tự như Homebrew nhưng dùng cho Ubuntu.
 Trên cửa sổ terminal bạn chạy câu lệnh sau để cài đặt PHP: $ sudo apt-get install php55
 
+### Các toán tử PHP được sử dụng phổ biến 
+- Toán tử số học: PHP hỗ trị hầu hết các toán tử số học như cộng +, trừ -, nhân *, chia /, lũy thừa pow() và tính phần dư %.
+- Toán tử gán giá trị
+- Toán tử so sánh: dùng để so sánh hai giá trị dạng số hoặc dạng chuỗi với nhau.
+- Toán tử tăng giảm : 1 đơn vị được sử dụng để tăng (hoặc giảm) giá trị của biến cho trước 1 đơn vị
+- Toán tử logic : được dùng để thực hiện các phép toán về logic. Ba toán tử logic được sử dụng phổ biến trong lập trình đó là:
+        && và and : Toán tử logic hợp
+        || và or : Toán tử logic tuyển
+- Toán tử nối chuỗi: Để nối chuỗi lại với nhau chúng ta dùng toán tử `.
+- Toán tử nối chuỗi và gán .= sẽ thực hiện việc nối chỗi hiện tại với một chỗi mới rồi sau đó gán giá trị này cho chính chuỗi ban đầu.
+
+### Cấu trúc của một hàm trong PHP
+Cú pháp tổng quát khai báo hàm trong PHP là:
+
+    function func_name($vars)
+    {
+        // các đoạn code
+        return $val;
+    }
+Chúng ta cũng có thể định nghĩa hàm với nhiều đối số khác nhau:
+
+    <?php
+        function print_sum($number_1, $number_2) {
+           print $number_1 + $number_2;
+        }
+        print_sum(2, 3);
+    ?>
+Hàm có thể trả về một giá trị khi được gọi. Để khai báo một hàm với giá trị trả về chúng ta sử dụng từ khoá return:
+
+    function sum($num1, $num2) {
+        return $num1 + $num2;
+    }
+
+### Cấu Trúc Điều Khiển 
+Trong lập trình, cấu trúc điều khiển hay còn gọi là control structure được sử dụng để điều khiển luồng chạy của chương trình.
+PHP cung cấp các cấu trúc điều khiển sau đây:
+    •	Câu lệnh if.
+    •	Câu lệnh if...else.
+    •	Câu lệnh if...elseif.
+    •	Câu lệnh switch
+
+#### Câu lệnh if else
+    if (biểu thức điều kiện thứ nhất) { 
+    // đoạn code được thực thi khi biểu thức điều kiện thử nhất có giá trị là true 
+    } else if (biểu thức điều kiện thứ 2) { 
+    // đoạn code được thực thi khi biểu thức điều kiện thứ nhất có giá trị là false // đồng thời biểu thức thứ hai có giá trị là true 
+    } else { 
+    // đoạn code được thực thi khi cả hai biểu thức điều kiện ở trên có giá trị là false 
+    }
+
+#### Câu lện switch case
+
+    switch (biến_hoặc_biểu_thức) { 
+    case giá_trị_so_sánh_1: 
+    // code được thực thi nếu giá trị biểu thức bằng với giá_trị_so_sánh_1 
+    break; 
+    case giá_trị_so_sánh_2: 
+    // code được thực thi nếu giá trị biểu thức bằng với giá_trị_so_sánh_2 
+    break; 
+    case giá_trị_so_sánh_3:
+     // code được thực thi nếu giá trị biểu thức bằng với giá_trị_so_sánh_3 
+    break; 
+    ... default:
+     // code được thực thi nếu giá trị biểu thức khác với  tất cả các giá trị so sánh ở trên
+     break; }
+### Vòng lặp
+Trong PHP chúng ta có các loại vòng lặp sau:
+•	Vòng lặp while.
+•	Vòng lặp do...while.
+•	Vòng lặp for.
+•	Vòng lặp foreach.
+
+#### Vòng lặp for
+    for ($bien_dieu_khien; $bieu_thuc_dieu_kien; $bieu_thuc_thay_doi_bien_dieu_khien)
+    {
+        // lệnh
+    }
+
+Trong đó
+-	$bien_dieu_khien: là một câu lệnh gán giá trị ban đầu cho biến điều khiển trước khi thực hiên vòng lặp, hoặc là một biến có giá trị sẵn mà ta đã truyền vào cho nó trước khi tạo vòng lặp này, lệnh này được thực hiện duy nhất một lần.
+-	$bieu_thuc_dieu_kien: là một biểu thức quan hệ xác định điều kiện thoát khỏi vòng lặp.
+-	$bieu_thuc_thay_doi_bien_dieu_khien: Xác định biến điều khiển sẽ bị thay đổi như thế nào sau mỗi lần lặp được lặp lại (thường là tăng hoặc giảm giá trị của biến điều khiển).
+
+
+#### Cấu trúc vòng lặp while
+    while ($condition) {
+        // dòng lệnh
+    }
+Trong đó $condition là điều kiện để dừng vòng lặp. Nếu $condition có giá trị false thì vòng lặp kết thúc, ngược lại vòng lặp sẽ tiếp tục lặp. Vòng lặp while sẽ lặp vô hạn nếu biểu thức điều kiện bạn truyền vào luôn luôn đúng.
+#### Cấu trúc vòng lặp do while
+Vòng lặp while sẽ kiểm tra điều kiện trước rồi thực hiện câu lệnh bên trong vòng lặp, còn vòng lặp do while thì ngược lại sẽ thực hiện câu lệnh bên trong vòng lặp trước rồi mới kiểm tra điều kiện. Nếu điều kiện đúng thì sẽ thực hiện tiếp vòng lặp kế tiếp, nếu điều kiện sai thì sẽ dừng vòng lặp. Vòng lặp do while trong php luôn luôn thực hiện ít nhất một lần lặp vì nó thực hiện trước rồi mới kiểm tra điều kiện.
+
+    do {
+        // dòng lệnh
+    } while ($condition);
+### Cú pháp vòng lặp foreach trong PHP
+Vòng lặp foreach tự động lặp qua các phần tử trong mảng, nó lặp cho khi nào tới phần tử cuối cùng thì thôi. 
+
+	foreach ($array as $key => $value){
+    // Các dòng lệnh
+    }
+Hoặc:
+
+    foreach ($array as $value){
+    // Các dòng lệnh
+    }
+Trong đó $array là mảng cần lặp, $key là số chỉ mục (mảng có chỉ mục) hoặc là key (trong mảng kết hợp), $value là giá trị của phần tử ở vị trí $key.
+
+### Mảng 
+Mảng là kiểu dữ liệu cho phép chúng ta lưu trữ nhiều giá trị trong nó bao gồm việc lưu trữ giá trị của một hoặc nhiều mảng khác.
+
+Mảng trong PHP được chia thành 3 loại khác nhau đó là:
+
+- Mảng đánh số thứ tự (indexed array)
+- Mảng kết hợp (associative array)
+- Mảng đa chiều (multidimensional array)
+
+Cả 3 loại trên đều có chung một cú pháp khi tạo mảng.
+
+#### Cú Pháp Tạo Mảng
+Để tạo mảng trong PHP chúng ta có thể sử dụng cú pháp:  array()
+Với các phiên bản PHP từ 5.4 trở về sau chúng ta có thể sử dụng cú pháp ngắn gọn hơn như sau:   []
+Ví dụ:
+
+    $top_car_brands = array("Toyota", "Honda", "BMW", "Ford", "Hyundai");
+    $top_car_brands =["Toyota", "Honda", "BMW", "Ford", "Hyundai"];
+    
+Đếm số lượng phần tử trong một mảng PHP chúng ta sử dụng hàm count().
+
+Mảng đánh số thứ tự (indexed array) trong PHP là loại mảng mà các phần tử được đánh số thứ tự là các số tự nhiên.
+
+Mảng dưới đây là một mảng đánh số thứ tự với các khoá là các số tự nhiên liên tiếp bắt đầu từ 0:
+
+    <?php 
+    $top_car_brands = array("Toyota", "Honda", "BMW", "Ford", "Hyundai"); 
+    print_r($top_car_brands); 
+    ?>
+- Mảng Kết Hợp - Associative Array
+
+- Mảng Đa Chiều (Multidimensional Array) là loại mảng mà nó chứa một mảng khác bên trong nó
+
+- Thay Đổi Giá Trị Của Phần Tử trong Mảng: Để thay đổi giá trị của phần tử trong mảng chúng ta sử dụng toán tử gán giá trị cho phần tử đó
+
+- Thêm Phần Tử Vào Mảng: Để thêm phần tử vào mảng chúng ta sử dụng toán tử gán giá trị với khoá tương ứng cho phần tử được thêm vào
+
+- Thêm Phần Tử Vào Cuối Mảng : Khi thêm phần tử vào mảng mà không sử dụng khoá cho phần tử này thì nó sẽ tự động được thêm vào sau phần tử cuối mảng trong mảng hiện tại
+
+- Xoá Phần Tử trong Mảng : Để xoá phần tử trong một mảng cho trước, chúng ta sử dụng hàm unset()
+
+- Mảng Rỗng : Mảng rỗng là mảng mà không chứa bất cứ phần tử nào
+
