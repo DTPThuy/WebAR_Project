@@ -1,5 +1,5 @@
 #  Tìm hiểu về lập trình web php, mysql, sử dụng framework Yii2 ( template Yii2 starter kit)
-## Tìm hiểu MySql
+
 ## Tìm hiểu Yii2 và cài đặt
 
 Yii là một framework php được xây dựng để phát triển các hệ thống web quy mô lớn dựa trên nền tảng các component. Yii cho phép tái sử dụng tối đa các thành phần trong hệ thống nhằm tăng tốc độ ứng dụng.
@@ -271,4 +271,93 @@ Mảng dưới đây là một mảng đánh số thứ tự với các khoá l�
 - Xoá Phần Tử trong Mảng : Để xoá phần tử trong một mảng cho trước, chúng ta sử dụng hàm unset()
 
 - Mảng Rỗng : Mảng rỗng là mảng mà không chứa bất cứ phần tử nào
+
+## Tìm hiểu MySql
+
+### Class Active Record
+Để thể hiện và thao tác với bảng dữ liệu country, ta tạo mới class Country, và lưu vào file models/Country.php.
+```php
+<?php
+
+namespace app\models;
+
+use yii\db\ActiveRecord;
+
+class Country extends ActiveRecord
+{
+}
+```
+
+### Create Action
+Để hiển thị dữ liệu country tới người dùng, bạn cần tạo mới hành động. 
+Thay vì đặt các hành động ở site controller, giống như đã làm ở phần trước, thì tạo controller mới có ý nghĩa hơn đặc biệt liên quan tới dữ liệu về coutry. 
+Tên controller là CountryController, và tạo mới hành động index ở trong đó, bạn có thể tham khảo ở phần dưới.
+Mục đích khi dùng đối tượng Pagination là:
+- Thiết lập điều kiện offset và limit cho câu lệnh mỗi khi lấy liệu ra (mỗi lần chỉ hiển thị 5 kết quả).
+- Dữ liệu được nhúng vào view để hiển thị số trang và bao gồm danh sách các button, sẽ được giải thích ở phần sau.
+
+Lưu nội dung đoạn mã vào file controllers/CountryController.php.
+
+```php
+<?php
+
+namespace app\controllers;
+
+use yii\web\Controller;
+use yii\data\Pagination;
+use app\models\Country;
+
+class CountryController extends Controller
+{
+    public function actionIndex()
+    {
+        $query = Country::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $countries = $query->orderBy('name')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('index', [
+            'countries' => $countries,
+            'pagination' => $pagination,
+        ]);
+    }
+}
+```
+
+### Create View
+Trong thư mục views, bước một tạo thư mục con là country. 
+Thư mực này được dùng để giữ những view được đổ ra từ controller country. 
+Trong thư mục views/country, tạo mới file tên là index.php và chứa đoạn mã sau:
+```php
+<?php
+use yii\helpers\Html;
+use yii\widgets\LinkPager;
+?>
+<h1>Countries</h1>
+<ul>
+<?php foreach ($countries as $country): ?>
+    <li>
+        <?= Html::encode("{$country->name} ({$country->code})") ?>:
+        <?= $country->population ?>
+    </li>
+<?php endforeach; ?>
+</ul>
+
+<?= LinkPager::widget(['pagination' => $pagination]) ?>
+```
+View trên có 2 phần liên quan tới hiển thị dữ liệu về country. Phần đầu tiên, cung cấp danh sách country và in ra dưới dạng danh sách . 
+Phần tiếp, một widget yii\widgets\LinkPager được sinh ra và dùng các thông tin truyển từ action xuống để phân trang. 
+Đối tượng LinkPager là một widget có chức năng hiển thị danh sách các button. Mỗi khi click vào mỗi button này sẻ cập nhật lại dữ liệu country ở mỗi trang tương ứng.
+
+### Result
+Sau khi chạy file index.php trong thư mục country ta trên hostlocal sẽ được như sau:
+
+![result](https://user-images.githubusercontent.com/84367730/140644724-c74dc0bd-4dbb-4e1a-8d4c-b2f03bfa608f.png)
 
