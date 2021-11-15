@@ -37,6 +37,10 @@ iv.	Chức năng biên tập nội dung ảnh tour : dịch chuyển vị trí �
 
 v.	Thực hiện phân tích thiết kế ứng dụng viết vào tài liệu.
 
+## Mô tả Website VR:
+1. Mô tả chung:
+Web 360 VR tour được tạo ra bằng cách liên kết những tấm ảnh 360 độ lại với nhau, giúp người dùng sử dụng điện thoại hoặc máy tính khi truy cập có thể tương tác hoàn chỉnh, di chuyển, quan sát tất cả các góc nhìn khác nhau đến tất cả các vị trí xung quanh như chính họ đang đứng quan sát, di chuyển trong các căn phòng, địa điểm mà hình ảnh chụp thông thường không bao giờ thực hiện được 
+2. Tính năng nổi bật: 
 
 # Host scenes on your own server with IIS Server 
 
