@@ -1,3 +1,43 @@
+# Ý tưởng và mô tả website VR tour
+
+VR là viết tắt của cụm từ Virtual Reality có nghĩa là thực tế ảo, đây là công nghệ giúp cho con người có thể cảm nhận một môi trường giả lập đang hiện ra trước mắt một cách chân thật nhất bằng các thiết bị hỗ trợ như máy tính hoặc kính thực tế ảo.
+
+website VR cho phép khách hàng trải nghiệm khám phá không gian, sự vật, sự việc ở cả 3 chiều thay vì các hình phẳng 2 chiều như website thông thường
+
+Là một công nghệ nhập vai, nó cho phép người dùng đi vào môi trường 3D tương tác, mang đến cho họ cơ hội khám phá các công trình thiết kế ảo của một căn phòng, một tầng nhà hoặc một tòa nhà cụ thể nói chung dù chưa được xây dựng.
+
+## Ý tưởng website VR:
+
+Web được chia làm 2 phần 
+
+Phần 1 : cho phép người dùng : dịch chuyển vị trí đối tượng, thay đổi vật liệu đối tượng, ẩn hiện đối tượng
+
+![image](https://user-images.githubusercontent.com/91117385/141721337-e158ce26-adb0-41ab-bb7c-e3fe31852ea1.png)
+
+
+Phần 2 : cảnh vật căn phòng sẽ hiển thị theo từng di chuyển và thay đổi của người dùng 
+  
+  ![image](https://user-images.githubusercontent.com/91117385/141721346-15e52df9-bd55-4899-b6c3-d5584d15534f.png)
+
+
+Bản mô phỏng trang web:
+
+![image](https://user-images.githubusercontent.com/91117385/141721333-0de8deba-0e3c-49c5-be84-456e6887de18.png)
+
+ 
+Chức năng chính hệ thống:
+
+i.	Đăng nhập cho quản trị viên
+
+ii.	Chức năng cho phép tải lên tour
+
+iii.	Trình diễn tour đã tải lên.
+
+iv.	Chức năng biên tập nội dung ảnh tour : dịch chuyển vị trí đối tượng, thay đổi vật liệu đối tượng, ẩn hiện đối tượng, gán nhãn ( khi click vào đối tương gán nhãn hiện popup thông tin đối tượng).
+
+v.	Thực hiện phân tích thiết kế ứng dụng viết vào tài liệu.
+
+
 # Host scenes on your own server with IIS Server 
 
 ## Sau khi cài đặt trong IIS server ta sẽ bundle cảnh trên Shapespark về để có thể tạo một gói cảnh của mình chứa tất cả các tệp được yêu cầu - HTML, kết cấu, JavaScrip, v.v. như sau:
