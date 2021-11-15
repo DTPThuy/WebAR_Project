@@ -41,6 +41,19 @@ v.	Thực hiện phân tích thiết kế ứng dụng viết vào tài liệu.
 1. Mô tả chung:
 Web 360 VR tour được tạo ra bằng cách liên kết những tấm ảnh 360 độ lại với nhau, giúp người dùng sử dụng điện thoại hoặc máy tính khi truy cập có thể tương tác hoàn chỉnh, di chuyển, quan sát tất cả các góc nhìn khác nhau đến tất cả các vị trí xung quanh như chính họ đang đứng quan sát, di chuyển trong các căn phòng, địa điểm mà hình ảnh chụp thông thường không bao giờ thực hiện được 
 2. Tính năng nổi bật: 
+- Tích hợp mọi thứ: Dễ dàng tích hợp mọi thông tin vào 360 VR Tour như: văn bản, liên kết, hình ảnh, video...
+- Không hạn chế số lượng góc nhìn: có thể không hạn chế số lượng góc nhìn vào 360 VR Tour 
+- Thoải mái sáng tạo: tùy vào từng dự án cụ thể mà cấu trúc của 360 VR Tour có thể được thay đổi tùy theo yêu cầu của bạn
+- Đa nền tảng: bạn có thể xem 360 VR Tour trên tất cả các thiết bị nền tảng như: máy tính, máy tính bảng, điện thoại, kính VR..
+- Thực tế ảo: với việc tích hợp công nghệ thực tế ảo thì 360 VR Tour có thể trải nghiệm bằng kính thực tế ảo.
+3. Lợi ích của 360 VR Tour mang lại cho doanh nghiệp:
+360 VR Tour là giải pháp quảng bá hình ảnh đặc sắc và độc đáo cho các doanh nghiệp muốn nâng cao trải nghiệm khách hàng. Ngày nay, công nghệ thực tế ảo bắt đầu được ứng dụng để quảng bá sản phẩm trong những lĩnh vực kinh doanh có yếu tố không gian như: kinh doanh spa, khách sạn, kiến trúc, bất động sản, trường học, khu du lịch
+Virtual là giải pháp mới lạ và tăng tính cạnh tranh cho hoạt động kinh doanh của doanh nghiệp, tạo ấn tượng với khách hàng. Với hình ảnh 360 các thông tin được thể hiện một cách trọn vẹn, đầy đủ qua góc nhìn 360 độ. Tại một vị trí, khách hàng của doanh nghiệp có thể xoay hình ảnh để quan sát mọi góc, các góc nhìn trở lên sống động hơn, thúc đẩy khách hàng chủ động tương tác với không gian của doanh nghiệp
+Hỗ trợ đa nền tảng:
+- Hình ảnh 360 độ hiện nay đã được hỗ trợ đăng tải trên nhiều nền tảng lớn như: website 3D, facebook, google street map,... Doanh nghiệp có thể dùng hình ảnh 360 độ để tiếp cận khách hàng mọi lúc mọi nơi như hình ảnh 2D mà lại mang đến sự chân thực và kích thích thị giác hơn rất nhiều.
+- Doanh nghiệp có thể sử dụng hình ảnh Panorama 360 sau khi chụp để tạo Virtual Tour. Công nghệ 360 VR Tour liên kết các hình ảnh 360 lại với nhau để tạo thành tour tham quan thực tế ảo toàn diện. Tức là, khách hàng có thể tương tác với không gian của doanh nghiệp ở nhiều vị trí khác nhau. 
+- Tiếp nối hình ảnh và video 360, Virtual Tour là bước tiến công nghệ vượt trội, có thể được sử dụng trên nhiều thiết bị, không chỉ với kính VR mà còn với máy tính, điện thoại, ipad,... Muốn tích hợp nhiều hình ảnh 360 độ, các doanh nghiệp sẽ sử dụng Virtual Tour tạo sự tương tác để khách hàng dễ dàng trải nghiệm. Công nghệ mới này hứa hẹn sẽ dần trở nên phổ biến. 360 VR Tour là một trong những tính năng cần có của thiết kế website du lịch, bất động sản, công trình xây dựng...
+Với sự phát triển không ngừng của công nghệ, các ấn phẩm hỗ trợ về mặt thị giác ngày càng trở nên phong phú hơn rất nhiều, mang lại nhiều trải nghiệm cho người xem hơn so với ấn phẩm 2D thông thường. Nếu biết sử dụng 360 VR Tour một cách hợp lý sẽ mang lại nhiều lợi thế cho doanh nghiệp. 
 
 # Host scenes on your own server with IIS Server 
 
