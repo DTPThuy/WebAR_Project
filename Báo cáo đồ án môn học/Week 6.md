@@ -1,3 +1,130 @@
+# Phân quyền bằng Rbac trong yii2 advanced
+Rbac trong yii2 giúp chúng ta dễ dàng trong việc phân quyền người dùng trong hệ thống lớn. Ví dụ admin có toàn quyền, sub có những quyền nào, người viết có quyền nào và người dùng có quyền nào.
+Đầu tiên chúng ta cần tạo Database phân quyền rbac:
+* Vào file main.php trong console/config/ thêm authManager:
+```
+return [
+  'id' => 'app-console',
+  'basePath' => dirname(__DIR__),
+  'bootstrap' => ['log'],
+  'controllerNamespace' => 'console\controllers',
+  'components' => [
+    'authManager' => [
+      'class' => 'yii\rbac\DbManager',
+      // 'defaultRoles' => ['guest'],
+      ],
+      'log' => [
+        'targets' => [
+          [
+            'class' => 'yii\log\FileTarget',
+            'levels' => ['error', 'warning'],
+          ],
+        ],
+      ],
+    ],
+    'params' => $params,
+];
+```
+Sau đó chạy lệnh sau:
+```
+yii migrate --migrationPath=@yii/rbac/migrations
+```
+Và bây giờ vào database chúng ta sẽ thấy có thêm 4 bảng dữ liệu mới là:
+- auth_rule
+- auth_item_child
+- auth_item
+- auth_asignment
+Vậy là bạn vừa tạo xong bảng dữ liệu phân quyền
+Sau khi đã có bảng phân quyền, chúng ta cần biết cách sử dụng nó trong code
+Đầu tiên chúng ta cần đến phần common/config/main.php hoặc backend/config/main.php
+Thêm dòng sau vào component
+```
+return [
+    // ...
+    'components' => [
+        // ...
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
+    ],
+    // ...
+];
+```
+Cách dùng là cho bào phần rules() trong behavios() của mỗi controller.
+Ví dụ:
+```
+<?php
+namespace backend\controllers;
+use yii\web\Controller;
+use common\models\Article;
+use yii\filters\AccessControl;
+
+class CkeditorController extends Controller
+{
+	public function behaviors()
+	{
+		return [
+				'access'=>
+				[
+						'class' =>AccessControl::className(),
+						'rules'=>
+						[
+								[
+									'allow' =>TRUE,
+									'actions'=>['index'],
+									'roles'=>['ads_view'],
+								],
+						]
+				]
+		];
+	}
+	public function actionIndex()
+	{
+		$model = new Article();
+		return $this->render('index',['model'=>$model]);
+	}
+}
+```
+Luôn để Rbac ở trong phần behavios() có nhiệm vụ check quyền đăng nhập vào controller này thông qua rules access. Rules access này được lấy từ component AccessControl(). Với hệ thống phần quyền này chúng ta sẽ chỉ truy cập được vào controller này khi có quyền permisson là ads_view. Nếu bạn không có quyền ads_view này thì bạn không thể vào xem được.
+## Set up quyền mặc định:
+Thường khi người dùng đăng kí thành viên vào web. Bạn muốn có 1 cái quyền cơ bản nào đó như là quyền tác giả, quyền được xem các mục chỉ có thành viên đăng kí mới xem đcượ. Khi đó chúng ta cần sử dụng 1 dòng code trong phần đăng kí để cấp quyền mặc định cho người dùng. Bạn vào phần: Frontend/controllers/SiteController chỉnh actionSignup()
+```
+public function actionSignup()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+    ```
+    Thành như sau:
+    ```
+    if ($this->validate()) {
+        $user = new User();
+        $user->username = $this->username;
+        $user->email = $this->email;
+        $user->setPassword($this->password);
+        $user->generateAuthKey();
+        $user->save(false);
+
+        // the following three lines were added:
+        $auth = \Yii::$app->authManager;
+        $authorRole = $auth->getRole('user');
+        $auth->assign($authorRole, $user->getId());
+
+        return $user;
+    }
+
+    return null;
+    ```
+    
 # Chức năng hiển thị thông tin và khoảng cách của sản phẩm
 
 Để sử dụng chức năng hiển thị thông tin và khoảng cách em sẽ sử dụng API của Shapespark. Đồng thời sẽ sửa tên của các sản phẩm theo đúng tên của nó.
