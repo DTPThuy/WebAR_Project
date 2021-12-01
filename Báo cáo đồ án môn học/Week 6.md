@@ -86,7 +86,7 @@ class CkeditorController extends Controller
 }
 ```
 Luôn để Rbac ở trong phần behavios() có nhiệm vụ check quyền đăng nhập vào controller này thông qua rules access. Rules access này được lấy từ component AccessControl(). Với hệ thống phần quyền này chúng ta sẽ chỉ truy cập được vào controller này khi có quyền permisson là ads_view. Nếu bạn không có quyền ads_view này thì bạn không thể vào xem được.
-## Set up quyền mặc định:
+### Set up quyền mặc định:
 Thường khi người dùng đăng kí thành viên vào web. Bạn muốn có 1 cái quyền cơ bản nào đó như là quyền tác giả, quyền được xem các mục chỉ có thành viên đăng kí mới xem đcượ. Khi đó chúng ta cần sử dụng 1 dòng code trong phần đăng kí để cấp quyền mặc định cho người dùng. Bạn vào phần: Frontend/controllers/SiteController chỉnh actionSignup()
 ```
 public function actionSignup()
@@ -123,8 +123,7 @@ public function actionSignup()
     }
 
     return null;
-    ```
-    
+   ```
 # Chức năng hiển thị thông tin và khoảng cách của sản phẩm
 
 Để sử dụng chức năng hiển thị thông tin và khoảng cách em sẽ sử dụng API của Shapespark. Đồng thời sẽ sửa tên của các sản phẩm theo đúng tên của nó.
