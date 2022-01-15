@@ -1,0 +1,66 @@
+.container-fluid {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.col-xs-3 {
+  flex: 0 0 25%;
+  max-width: 450px;
+}
+
+.col-xs-9 {
+  flex: 0 0 75%;
+  min-width: 75%;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  border: none;
+  width: 100%;
+  height: auto;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 0;
+}
+
+#viewer {
+  display: none;
+}
+
+/* Texture-picker */
+#picker {
+  position: relative;
+  top: 0px;
+  width: 256px;
+  z-index: 10;
+}
+
+#picker > img,
+#picker > video {
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+}
+
+/* Node-click */
+#click-info {
+  position: relative;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+#nodes,
+#distance {
+  font-weight: bold;
+}
