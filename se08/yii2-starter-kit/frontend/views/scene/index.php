@@ -400,3 +400,199 @@ $customPath = CustomAsset::register($this);
         }
     </script>
     <script src="<?php echo $customPath->baseUrl; ?>/webwalk/walk.min.js" type="text/javascript"></script>
+    <style>
+#picker {
+   position: absolute;
+   top: 0px;
+   width: 256px;
+   z-index: 10;
+}
+
+#picker > img, #picker > video {
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+}
+
+</style>
+<div id="picker">
+<!-- DOOR -->
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Door/1.jpg"
+    id="door1" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Door/2.jpg"
+    id="door2" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Door/3.jpg"
+    id="door3" crossorigin="anonymous">
+
+<!-- FLOOR -->
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Floor/1.jpg"
+    id="floor1" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Floor/2.jpg"
+    id="floor2" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Floor/3.jpg"
+    id="floor3" crossorigin="anonymous">
+
+<!-- REM -->
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Rem/1.jpg"
+    id="rem1" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Rem/2.jpg"
+    id="rem2" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Rem/3.jpg"
+    id="rem3" crossorigin="anonymous">
+
+<!-- Wall -->
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Wall/1.jpg"
+    id="wall1" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Wall/2.jpg"
+    id="wall2" crossorigin="anonymous">
+<img src="<?php echo $customPath->baseUrl; ?>/custom/Wall/3.jpg"
+    id="wall3" crossorigin="anonymous">
+
+</div>
+<script>
+  var viewer = WALK.getViewer();
+  viewer.setMaterialEditable('[0052_FloralWhite]');
+  // Alternatively: viewer.setAllMaterialsEditable();
+  var textureElementIds = ['door1', 'door2', 'door3'];
+  textureElementIds.forEach(function(textureElementId) {
+    var textureElement = document.getElementById(textureElementId);
+    var texture = null;
+    textureElement.addEventListener('click', function() {
+      // Create the texture only the first time the texture element is clicked
+      // and reuse it for subsequent clicks.
+      if (texture === null) {
+        if (textureElement instanceof HTMLVideoElement) {
+          // textureElement is <video>
+          texture = viewer.createTextureFromHtmlVideo(textureElement);
+        } else {
+          // textureElement is <img>
+          texture = viewer.createTextureFromHtmlImage(textureElement);
+        }
+      }
+      var material = viewer.findMaterial('[0052_FloralWhite]');
+      material.baseColorTexture = texture;
+      // Force the frame to be renderer, otherwise the changed texture
+      // will be visible only after the camera is moved.
+      viewer.requestFrame();
+    });
+  });
+</script>
+
+<script>
+  var viewer = WALK.getViewer();
+  viewer.setMaterialEditable('tuong');
+  // Alternatively: viewer.setAllMaterialsEditable();
+  var textureElementIds = ['wall1', 'wall2', 'wall3'];
+  textureElementIds.forEach(function(textureElementId) {
+    var textureElement = document.getElementById(textureElementId);
+    var texture = null;
+    textureElement.addEventListener('click', function() {
+      // Create the texture only the first time the texture element is clicked
+      // and reuse it for subsequent clicks.
+      if (texture === null) {
+        if (textureElement instanceof HTMLVideoElement) {
+          // textureElement is <video>
+          texture = viewer.createTextureFromHtmlVideo(textureElement);
+        } else {
+          // textureElement is <img>
+          texture = viewer.createTextureFromHtmlImage(textureElement);
+        }
+      }
+      var material = viewer.findMaterial('tuong');
+      material.baseColorTexture = texture;
+      // Force the frame to be renderer, otherwise the changed texture
+      // will be visible only after the camera is moved.
+      viewer.requestFrame();
+    });
+  });
+</script>
+
+<script>
+  var viewer = WALK.getViewer();
+  viewer.setMaterialEditable('[0017_IndianRed]');
+  // Alternatively: viewer.setAllMaterialsEditable();
+  var textureElementIds = ['floor1', 'floor2', 'floor3'];
+  textureElementIds.forEach(function(textureElementId) {
+    var textureElement = document.getElementById(textureElementId);
+    var texture = null;
+    textureElement.addEventListener('click', function() {
+      // Create the texture only the first time the texture element is clicked
+      // and reuse it for subsequent clicks.
+      if (texture === null) {
+        if (textureElement instanceof HTMLVideoElement) {
+          // textureElement is <video>
+          texture = viewer.createTextureFromHtmlVideo(textureElement);
+        } else {
+          // textureElement is <img>
+          texture = viewer.createTextureFromHtmlImage(textureElement);
+        }
+      }
+      var material = viewer.findMaterial('[0017_IndianRed]');
+      material.baseColorTexture = texture;
+      // Force the frame to be renderer, otherwise the changed texture
+      // will be visible only after the camera is moved.
+      viewer.requestFrame();
+    });
+  });
+</script>
+
+<script>
+  var viewer = WALK.getViewer();
+  viewer.setMaterialEditable('curtain');
+  // Alternatively: viewer.setAllMaterialsEditable();
+  var textureElementIds = ['rem1', 'rem2', 'rem3'];
+  textureElementIds.forEach(function(textureElementId) {
+    var textureElement = document.getElementById(textureElementId);
+    var texture = null;
+    textureElement.addEventListener('click', function() {
+      // Create the texture only the first time the texture element is clicked
+      // and reuse it for subsequent clicks.
+      if (texture === null) {
+        if (textureElement instanceof HTMLVideoElement) {
+          // textureElement is <video>
+          texture = viewer.createTextureFromHtmlVideo(textureElement);
+        } else {
+          // textureElement is <img>
+          texture = viewer.createTextureFromHtmlImage(textureElement);
+        }
+      }
+      var material = viewer.findMaterial('curtain');
+      material.baseColorTexture = texture;
+      // Force the frame to be renderer, otherwise the changed texture
+      // will be visible only after the camera is moved.
+      viewer.requestFrame();
+    });
+  });
+</script>
+
+<style>
+#click-info {
+  position: absolute;
+  top: 350px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.5em;
+  z-index: 10;
+}
+#nodes, #distance {
+  font-weight: bold;
+}
+</style>
+<div id="click-info">
+  Clicked nodes: <span id="nodes">-</span><br/>
+  Click distance: <span id="distance">-</span> m
+</div>
+<script>
+  var viewer = WALK.getViewer();
+  viewer.onNodeTypeClicked(function(node, position, distance) {
+    var nodeTypePath = [];
+    while (node) {
+      nodeTypePath.push(node.type);
+      node = node.parent;
+    }
+    document.getElementById('nodes').innerHTML = nodeTypePath.join(' > ');
+    document.getElementById('distance').innerHTML = distance.toFixed(2);
+    return true;
+  });
+</script>
+
